@@ -1,0 +1,35 @@
+#!/bin/bash
+# Script Name: if.sh
+# Author: username-c-is-unavailable
+# Date Created: 01 Nov 2018
+# Purpose: Executes some commands for the lab.
+# Description: Accept an input value from a user, and output the rating of the movie they are allowed to see. Note: Does not validate that the input is an integer.
+# Date Last Modified: N/A
+
+echo -n "Please enter a numerical value for your age "
+read age
+
+# Check that the age is greater than zero
+if [ $age -le 0 ]
+then echo "Please enter a number that is greater than zero."
+# Check if the age is greater than 121
+elif [ $age -gt 121 ]
+then echo "Sorry, you cannot see any movies, you are dead."
+# Check if the age is greater than 21
+elif [ $age -gt 21 ]
+then echo "You can see movies that are rated 'X'."
+# Check if the age is greater than 17
+elif [ $age -gt 17 ]
+then echo "You can see movies that are rated 'R'."
+# Check if the age is greater than 13
+elif [ $age -gt 13 ]
+then echo "You can see movies that are rated PG-13."
+# Check if the age is less thanor equal to 13
+elif [ $age -le 13 ]
+then echo "You can see movies that are rated G and those that are rated PG."
+# Check if the age is less than zero
+elif [ $age -le 0 ]
+then echo "Please enter a number that is greater than zero"
+# Final else statement
+else echo "You have entered invalid input."
+fi
